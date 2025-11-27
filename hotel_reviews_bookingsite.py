@@ -168,10 +168,12 @@ if st.session_state.show_dashboard:
         </div>
         """, unsafe_allow_html=True)
 
-        url = f"https://drive.google.com/uc?id=1ettEecLvalYALHp12Q-1feda8apTpeeg"
+        file_id = "1ettEecLvalYALHp12Q-1feda8apTpeeg"
+        url = f"https://drive.google.com/uc?id={file_id}&export=download"
         df = pd.read_csv(url)
         st.dataframe(df)
 
+        
         st.markdown("""
         <div style="
             text-align: center;
@@ -1056,5 +1058,6 @@ if st.session_state.show_dashboard:
 
             # عرض الخريطة
             st.plotly_chart(fig50, use_container_width=True)
+
 
 
