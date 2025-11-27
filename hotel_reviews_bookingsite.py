@@ -168,7 +168,8 @@ if st.session_state.show_dashboard:
         </div>
         """, unsafe_allow_html=True)
 
-        df=pd.read_csv('hotel_review_final.csv')
+        url = f"https://drive.google.com/uc?id=1ettEecLvalYALHp12Q-1feda8apTpeeg"
+        df = pd.read_csv(url)
         st.dataframe(df)
 
         st.markdown("""
@@ -1055,4 +1056,5 @@ if st.session_state.show_dashboard:
 
             # عرض الخريطة
             st.plotly_chart(fig50, use_container_width=True)
+
 
