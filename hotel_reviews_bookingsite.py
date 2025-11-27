@@ -7,6 +7,8 @@ import plotly.graph_objects as go
 import seaborn as sns
 from plotly.subplots import make_subplots
 import streamlit as st
+import gdown
+
 
 # ---- Page config ----
 st.set_page_config(layout='wide')
@@ -169,8 +171,9 @@ if st.session_state.show_dashboard:
         """, unsafe_allow_html=True)
 
         file_id = "1ettEecLvalYALHp12Q-1feda8apTpeeg"
-        url = f"https://drive.google.com/uc?id={file_id}&export=download"
-        df = pd.read_csv(url)
+        url = f"https://drive.google.com/uc?id={file_id}"
+        gdown.download(url, "hotel_review_final.csv", quiet=False)
+        df = pd.read_csv("hotel_review_final.csv")
         st.dataframe(df)
 
         
@@ -1058,6 +1061,7 @@ if st.session_state.show_dashboard:
 
             # عرض الخريطة
             st.plotly_chart(fig50, use_container_width=True)
+
 
 
 
