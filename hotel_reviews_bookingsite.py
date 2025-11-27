@@ -168,11 +168,8 @@ if st.session_state.show_dashboard:
         </div>
         """, unsafe_allow_html=True)
 
-        file_id = "1higO1-ilZghrXknbg6OOhS5EPD8pHjP3"
-        url = f"https://drive.google.com/uc?id={file_id}"
-        
-        df = pd.read_csv(url)
-        st.write(df)
+        df=pd.read_csv('hotel_review_final.csv')
+        st.dataframe(df)
 
         st.markdown("""
         <div style="
@@ -268,11 +265,7 @@ if st.session_state.show_dashboard:
             st.write("📌 Reviewer Nationalities Treemap")
 
             #  تحضير DataFrame
-            file_id = "1higO1-ilZghrXknbg6OOhS5EPD8pHjP3"
-            url = f"https://drive.google.com/uc?id={file_id}"
-            df = pd.read_csv(url)
-
-            
+            df=pd.read_csv('hotel_review_final.csv')
             df1 = df['reviewer_nationality'].value_counts(ascending=False).reset_index()
             df1.columns = ['reviewer_nationality', 'count']
 
@@ -306,10 +299,8 @@ if st.session_state.show_dashboard:
         with tab2:
             st.write("📌 top 10 nationalites")
 
-            file_id = "1higO1-ilZghrXknbg6OOhS5EPD8pHjP3"
-            url = f"https://drive.google.com/uc?id={file_id}"
-            df = pd.read_csv(url)
-            
+            df=pd.read_csv('hotel_review_final.csv')
+
             df2 = df['reviewer_nationality'].value_counts().head(10).reset_index()
             df2.columns = ['reviewer_nationality', 'count']
 
@@ -356,10 +347,7 @@ if st.session_state.show_dashboard:
         with tab3:
             st.write("📌least 10 nationalities")
 
-            file_id = "1higO1-ilZghrXknbg6OOhS5EPD8pHjP3"
-            url = f"https://drive.google.com/uc?id={file_id}"
-            df = pd.read_csv(url)
-            
+            df=pd.read_csv('hotel_review_final.csv')
             df3=df['reviewer_nationality'].value_counts(ascending=True).head(10).T.to_frame().reset_index()
             df3.columns = ['reviewer_nationality' , 'count' ]
 
@@ -399,9 +387,7 @@ if st.session_state.show_dashboard:
             st.write("📌total reviews distribution")
 
 
-            file_id = "1higO1-ilZghrXknbg6OOhS5EPD8pHjP3"
-            url = f"https://drive.google.com/uc?id={file_id}"
-            df = pd.read_csv(url)  # أو 'latin1' لو فيه مشاكل في الترميز
+            df = pd.read_csv('hotel_review_final.csv', encoding='utf-8')  # أو 'latin1' لو فيه مشاكل في الترميز
 
             # Scatter plot
             fig20 = px.scatter(
@@ -421,9 +407,7 @@ if st.session_state.show_dashboard:
 
             st.write("📌top written Reviews")
 
-            file_id = "1higO1-ilZghrXknbg6OOhS5EPD8pHjP3"
-            url = f"https://drive.google.com/uc?id={file_id}"
-            df = pd.read_csv(url)
+            df = pd.read_csv('hotel_review_final.csv', encoding='utf-8')
 
             df17 = df[['hotel_name', 'total_number_of_reviews', 'additional_number_of_scoring', 'reviewer_nationality']].copy()
             df17['written_reviews'] = df17['total_number_of_reviews'] - df17['additional_number_of_scoring']
@@ -1071,5 +1055,4 @@ if st.session_state.show_dashboard:
 
             # عرض الخريطة
             st.plotly_chart(fig50, use_container_width=True)
-
 
