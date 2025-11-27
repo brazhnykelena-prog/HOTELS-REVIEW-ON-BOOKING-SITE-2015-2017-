@@ -1,0 +1,18 @@
+20 Rue De La Gaston, 14th arr, 75014 Paris, France
+23 Rue Damrémont, 18th arr, 75018 Paris, France
+4 Rue de la Pépinière, 8th arr, 75008 Paris, France
+Bail n 4, 6 Eixample, 08010 Barcelona, Spain
+Grüntentorgasse 30, 09 Alsergrund, 1090 Vienna, Austria
+Hasenauerstraße 12, 19 Döbling, 1190 Vienna, Austria
+Josefstädter Straße 10-12, 08 Josefstadt, 1080 Vienna, Austria
+Josefstädter Straße 22, 08 Josefstadt, 1080 Vienna, Austria
+Landstraßer Gürtel 5, 03 Landstraße, 1030 Vienna, Austria
+Paragonstraße 1, 11 Simmering, 1110 Vienna, Austria
+Pau Claris 122, Eixample, 08009 Barcelona, Spain
+Savoyenstraße 2, 16 Ottakring, 1160 Vienna, Austria
+Sepúlveda 180, Eixample, 08011 Barcelona, Spain
+Sieveringer Straße 4, 19 Döbling, 1190 Vienna, Austria
+Taborstraße 8A, 02 Leopoldstadt, 1020 Vienna, Austria
+Währinger Straße 12, 09 Alsergrund, 1090 Vienna, Austria
+Währinger Straße 33-35, 09 Alsergrund, 1090 Vienna, Austria
+
